@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+{% if terror == "create" %}
+<script>
+    alert('Send Feedback Successfully');
+    window.location="{% url 'sent_feedback' %}";
+</script>
+{% endif %}
+
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section mb-md-5 mb-4">
+				<h6 class="w3ls-title-sub"></h6>
+				<br><br>
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">Send Feedback</h3>
+			</div><hr/>
+			<div class="login px-sm-12" style="width:100%">
+				<form action="" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group row">
+						<div class="col-md-12">
+						<label>Username</label>
+						<input type="text" class="form-control" name="uname" value="{{request.user.username}}" required="" readonly>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-12">
+						<label>Write Message</label>
+						<textarea class="form-control" name="msg" placeholder="Write Messages" required="">
+                        </textarea>
+                        </div>
+					</div>
+					<button type="submit" class="btn submit mt-4" style="background-color: #726f6e;">Send Feedback</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+
+<!-- This is a Django template for a feedback form. The template extends from a base template called index.html
+and loads static files. The main content of the template is within the body block.
+The template checks if a variable terror is set to "create". If it is, an alert is displayed and the user
+is redirected to the URL named sent_feedback. This could be used to display a success message after 
+submitting the feedback form.
+The feedback form itself is displayed within a section element with the class logins. It contains a 
+container with a title section and a form with two fields: "Username" and "Write Message". The "Username"
+field is prefilled with the current user's username and is read-only. The "Write Message" field is a 
+multi-line text area where the user can write their feedback. The form also contains a CSRF token and a 
+"Send Feedback" button. -->

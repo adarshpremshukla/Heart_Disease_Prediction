@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container-fluid" style="width:90%;margin-top:8%">
+                    <div class="container-fluid">
+                        <h1 align="center" style="font-weight:bold;font-family : 'Monotype Corsiva' ; color : #E6120E ;margin-top:4%">New Search</h1>
+                         </div><hr>
+                                <table id="example" class="display" style="width:100%">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Patient</th>
+                                      <th>Contact</th>
+                                      <th>Email</th>
+                                      <th>Symptom</th>
+                                      <th>Disease</th>
+                                      <th>Type</th>
+                                      <th>Date</th>
+                                      <th>Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              {% for i in pro %}
+                                <tr>
+                                  <td>{{forloop.counter}}</td>
+                                  <td>{{i.user.user.first_name}}</td>
+                                  <td>{{i.user.contact}}</td>
+                                  <td>{{i.user.user.email}}</td>
+                                  <td>{{i.symptom}}</td>
+                                  <td>{{i.disease}}</td>
+                                  <td>{{i.type.name}}</td>
+                                  <td>{{i.date1}}</td>
+                                  <td style="width:150px">
+                                      <a href="{% url 'delete_notification' i.id %}" ><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash-o"></i></button></a></td>
+                              </tr>
+                              {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
+{% endblock %}
+
+
+<!-- This is a Django template for displaying a table with search results. The table has nine columns, and 
+each row contains information about a patient's appointment. The first column shows the appointment 
+number, and the other columns show the patient's name, contact information, email, symptoms, disease, 
+appointment type, date, and an action button for deleting the appointment.
+The data for the table is provided by the context variable pro, which is a list of appointment objects. 
+The template uses a for loop to iterate over the list and display each appointment in a separate row. 
+The forloop.counter template variable is used to display the appointment number in the first column.
+The template uses Bootstrap to style the table and the action button. The action button is linked to the 
+delete_notification URL, which is used to delete the appointment when clicked. A confirmation message is 
+displayed to the user before deleting the appointment. -->

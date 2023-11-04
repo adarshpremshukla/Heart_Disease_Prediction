@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="file"  accept="image/gif, image/jpeg, image/png"  onchange="loadFile(event)" name="image" id="file">
+    <div class="container" id="extract">
+        <img id="output" width="200" />
+    </div>
+</form>
+<button id="form_zip">Final Check</button>
+
+</body>
+
+
+<script>
+
+<script>
+    var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+<!--<script>-->
+
+<!--function zipExtract(){-->
+<!--    var zip_file = document.getElementById('extract_file').value;-->
+<!--&lt;!&ndash;    var JSZip = require('JSZip');&ndash;&gt;-->
+<!--        alert(fs.readFile(zip_file));-->
+<!--&lt;!&ndash;    fs.readFile(zip_file, function(err, data) {&ndash;&gt;-->
+<!--&lt;!&ndash;    if (!err) {&ndash;&gt;-->
+<!--&lt;!&ndash;        var zip = new JSZip();&ndash;&gt;-->
+<!--&lt;!&ndash;        zip.loadAsync(data).then(function(contents) {&ndash;&gt;-->
+<!--&lt;!&ndash;            Object.keys(contents.files).forEach(function(filename) {&ndash;&gt;-->
+<!--&lt;!&ndash;                zip.file(filename).async('nodebuffer').then(function(content) {&ndash;&gt;-->
+<!--&lt;!&ndash;                    var dest = path + filename;&ndash;&gt;-->
+<!--&lt;!&ndash;                    fs.writeFileSync(dest, content);&ndash;&gt;-->
+<!--&lt;!&ndash;                    alert(fs);&ndash;&gt;-->
+<!--&lt;!&ndash;                });&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;});&ndash;&gt;-->
+<!--}-->
+
+
+<!--&lt;!&ndash;var JSZip = require('JSZip');&ndash;&gt;-->
+
+<!--&lt;!&ndash;fs.readFile(filePath, function(err, data) {&ndash;&gt;-->
+<!--&lt;!&ndash;    if (!err) {&ndash;&gt;-->
+<!--&lt;!&ndash;        var zip = new JSZip();&ndash;&gt;-->
+<!--&lt;!&ndash;        zip.loadAsync(data).then(function(contents) {&ndash;&gt;-->
+<!--&lt;!&ndash;            Object.keys(contents.files).forEach(function(filename) {&ndash;&gt;-->
+<!--&lt;!&ndash;                zip.file(filename).async('nodebuffer').then(function(content) {&ndash;&gt;-->
+<!--&lt;!&ndash;                    var dest = path + filename;&ndash;&gt;-->
+<!--&lt;!&ndash;                    fs.writeFileSync(dest, content);&ndash;&gt;-->
+<!--&lt;!&ndash;                });&ndash;&gt;-->
+<!--&lt;!&ndash;            });&ndash;&gt;-->
+<!--&lt;!&ndash;        });&ndash;&gt;-->
+<!--&lt;!&ndash;    }&ndash;&gt;-->
+<!--&lt;!&ndash;});&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+<!--</script>-->
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+This is an HTML code for a form with a file input that allows users to upload an image file, and a button
+with an id of "form_zip" for final check. The uploaded image is displayed as a preview using JavaScript.
+There is also some commented-out JavaScript code that seems to be related to extracting files from a zip
+archive, but it is not functional as is. It includes some code related to the JSZip library, fs module, 
+and file input elements, which suggests that it might be intended for use in a Node.js environment -->

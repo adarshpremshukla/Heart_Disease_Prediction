@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+{% if error == "pat1" %}
+<script>
+    alert('logged in successfully');
+    window.location="{% url 'patient_home' %}";
+</script>
+{% endif %}
+
+{% if error == "notmember" %}
+<script>
+    alert('Your information verification is pending.plz login after sometimes');
+    window.location="{% url 'logout' %}";
+</script>
+{% endif %}
+{% if error == "pat2" %}
+<script>
+    alert('logged in successfully');
+    window.location="{% url 'doctor_home' %}";
+</script>
+{% endif %}
+{% if error == "not" %}
+<script>
+    alert('Username & Password are not Matching');
+</script>
+{% endif %}
+
+	<!-- login -->
+	<section class="logins py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="title-section mb-md-5 mb-4">
+				<center>
+				<h6 class="w3ls-title-sub"></h6><br><br>
+				<h3 class="w3ls-title text-uppercase text-dark font-weight-bold">Login</h3></center>
+			</div><hr/>
+			<div class="login px-sm-4 mx-auto mw-100 login-wrapper">
+				<form class="login-wrapper" action="" method="post">
+					{% csrf_token %}
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text" class="form-control" name="uname" placeholder="Enter Username" required="">
+						<small id="emailHelp" class="form-text text-muted">We'll never share your Detail with anyone else.</small>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" class="form-control" name="pwd" placeholder="Enter Your Password" required="">
+					</div>
+					<button type="submit" class="btn submit mt-4" style="background-color: #605d5d;">Login</button>
+					<p class="text-center mt-5">
+						<a href="{% url 'signup' %}"> Don't have an Account?  <span style="color: #61bbb9;font-weight: bolder;">Register here</span></a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- //login -->
+{% endblock %}
+
+
+
+<!-- This is a Django template for a login page. The template extends from a base template named "index.html" 
+and loads the static files. The block "body" is defined, and it contains HTML code to display different 
+messages depending on the error status of the login process.
+If the error is "pat1," it shows an alert with the message "logged in successfully" and redirects to the 
+patient home page. If the error is "notmember," it shows an alert with the message "Your information 
+verification is pending.plz login after sometimes" and redirects to the logout page. If the error is 
+"pat2," it shows an alert with the message "logged in successfully" and redirects to the doctor home page.
+If the error is "not," it shows an alert with the message "Username & Password are not Matching."
+The login form is defined in the HTML code using the form tag, and it contains two input fields for the 
+username and password. The form submits to the same URL as the page itself, using the POST method, and 
+includes a CSRF token to prevent cross-site request forgery attacks.
+If the user doesn't have an account, there is a link to the signup page. -->

@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container-fluid" style="width:90%;margin-top:8%">
+                    <div class="container-fluid">
+                        <h1 align="center" class="w3ls-title text-uppercase text-dark font-weight-bold">View Feedbacks</h1><br>
+                        
+                         </div><hr>
+                                <table id="example" class="display" style="width:100%">
+                                  <thead>
+                                    <tr>
+                                      <th>#</th>
+                                      <th>Full Name</th>
+                                      <th>Email</th>
+                                      <th>Contact</th>
+                                      <th>Messages</th>
+                                      <th>Action</th>
+
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              {% for i in dis %}
+                                <tr>
+                                  <td>{{forloop.counter}}</td>
+                                  <td>{{i.user.first_name}} {{i.user.user.last_name}}</td>
+                                  <td>{{i.user.email}}</td>
+                                  <td>{{i.user.patient_set.all.0.contact}}</td>
+                                  <td>{{i.messages}}</td>
+                                  <td style="width:150px">
+                                      <a href="{% url 'delete_feedback' i.id %}" ><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash-o"></i></button></a></td>
+                              </tr>
+                              {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
+{% endblock %}
+
+<!-- 
+This looks like a Django template that extends a base template named 'index.html' and has a block named 
+'body'. The template appears to display a table of feedback records, with columns for the record's ID, 
+the user's full name, email, contact, and message. It also includes a delete button to remove a feedback 
+record.
+There are no obvious syntax errors, but the third line, {% load static %}, suggests that the template is 
+using static files, but there are no references to static files in the code. It's possible that the 
+static files are being loaded in the base template, but it's unclear from this code snippet -->
