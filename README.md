@@ -26,36 +26,36 @@ In addition, a well-defined purpose statement can help to generate buy-in and su
 <p>
   The scope of a project refers to the boundaries and limitations of the project, including its objectives, deliverables, and constraints. In the context of heart disease prediction, the scope of the project may include:
 Objectives:
-• To develop a machine learning-based predictive model for heart disease risk assessment
-• To improve the accuracy and accessibility of heart disease risk assessment for patients
-• To enable early detection and intervention for high-risk patients
-• To reduce the impact of heart disease on patients and the healthcare system
+### To develop a machine learning-based predictive model for heart disease risk assessment
+### To improve the accuracy and accessibility of heart disease risk assessment for patients
+### To enable early detection and intervention for high-risk patients
+### To reduce the impact of heart disease on patients and the healthcare system
 Deliverables:
-• A machine learning-based predictive model for heart disease risk assessment
-• A user interface for accessing and interacting with the predictive model
-• Documentation and training materials for healthcare providers and patients
+### A machine learning-based predictive model for heart disease risk assessment
+### A user interface for accessing and interacting with the predictive model
+### Documentation and training materials for healthcare providers and patients
 Constraints:
-• Time constraints for the development and deployment of the system
-• Availability and quality of data for training and testing the predictive model
-• Legal and ethical considerations related to data privacy and security
-• Regulatory compliance with healthcare industry standards and guidelines
+### Time constraints for the development and deployment of the system
+### Availability and quality of data for training and testing the predictive model
+### Legal and ethical considerations related to data privacy and security
+### Regulatory compliance with healthcare industry standards and guidelines
 </p>
 
 
 ## Modules:
-Patient Login: The patient logs in to the system using his ID and Password.
-Patient Registration: If the Patient is a new user, he will enter his personal details he will user ID, and password through which he can log in to the system.
-My Details: The patient can view his personal details.
-Disease Prediction: The patient will specify the input parameter values. The system will take input values and predict the disease based on the input data values specified by the patient and the system will also suggest doctors based on the locality
-Search Doctor: The patient can search for a doctor by specifying a name, address, or type.
-Feedback: The patient will give feedback this will be reported to the admin
-Doctor Login: The doctor will access the system using his User ID and Password.
-Admin Login: Admin can log in to the system using his ID and Password.
-Add Doctor: The admin can add new doctor details to the database.
-Add Dataset: The admin can add a dataset file to the database.
-View Doctor: The Admin can view various Doctors along with their personal details.
-View Patient: The Admin can view various patient details that have accessed the system.
-View Feedback: Admin can view feedback provided by various users.
+### Patient Login: The patient logs in to the system using his ID and Password.
+### Patient Registration: If the Patient is a new user, he will enter his personal details he will user ID and password through which he can log in to the system.
+### My Details: The patient can view his personal details.
+### Disease Prediction: The patient will specify the input parameter values. The system will take input values and predict the disease based on the input data values specified by the patient and the system will also suggest doctors based on the locality
+### Search Doctor: The patient can search for a doctor by specifying a name, address, or type.
+### Feedback: The patient will give feedback this will be reported to the admin
+### Doctor Login: The doctor will access the system using his User ID and Password.
+### Admin Login: Admin can log in to the system using his ID and Password.
+### Add Doctor: The admin can add new doctor details to the database.
+### Add Dataset: The admin can add a dataset file to the database.
+### View Doctor: The Admin can view various Doctors along with their personal details.
+### View Patient: The Admin can view various patient details that have accessed the system.
+### View Feedback: Admin can view feedback provided by various users.
   
 
 
