@@ -26,7 +26,7 @@ In addition, a well-defined purpose statement can help to generate buy-in and su
 <p>
   The scope of a project refers to the boundaries and limitations of the project, including its objectives, deliverables, and constraints. In the context of heart disease prediction, the scope of the project may include:
 Objectives:
-### To develop a machine learning-based predictive model for heart disease risk assessment
+<p> To develop a machine learning-based predictive model for heart disease risk assessment.</p>
 ### To improve the accuracy and accessibility of heart disease risk assessment for patients
 ### To enable early detection and intervention for high-risk patients
 ### To reduce the impact of heart disease on patients and the healthcare system
@@ -43,7 +43,7 @@ Constraints:
 
 
 ## Modules:
-### Patient Login: The patient logs in to the system using his ID and Password.
+<p> Patient Login: The patient logs in to the system using his ID and Password.</p>
 ### Patient Registration: If the Patient is a new user, he will enter his personal details he will user ID and password through which he can log in to the system.
 ### My Details: The patient can view his personal details.
 ### Disease Prediction: The patient will specify the input parameter values. The system will take input values and predict the disease based on the input data values specified by the patient and the system will also suggest doctors based on the locality
